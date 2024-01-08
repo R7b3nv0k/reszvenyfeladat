@@ -8,13 +8,7 @@ from bs4 import BeautifulSoup
 import requests
 import json
 import time
-#---------------------------------#
-# New feature (make sure to upgrade your streamlit library)
-# pip install --upgrade streamlit
 
-#---------------------------------#
-# Page layout
-## Page expands to full width
 st.set_page_config(layout="wide")
 #---------------------------------#
 # Title
