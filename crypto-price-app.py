@@ -1,26 +1,4 @@
-import yfinance as yf
-import streamlit as st
-import pandas as pd
-
-st.write("""
-# Simple Stock Price App
-
-Shown are the stock closing price and volume of Google!
-
-""")
-
-# https://towardsdatascience.com/how-to-get-stock-data-using-python-c0de1df17e75
-#define the ticker symbol
-tickerSymbol = 'GOOGL'
-#get data on this ticker
-tickerData = yf.Ticker(tickerSymbol)
-#get the historical prices for this ticker
-tickerDf = tickerData.history(period='1d', start='2010-5-31', end='2020-5-31')
-# Open    High    Low    Close    Volume    Dividends    Stock Splits
-
-st.line_chart(tickerDf.Close)
-st.line_chart(tickerDf.Volume)
-
+# This app is for educational purpose only. Insights gained is not financial advice. Use at your own risk!
 import streamlit as st
 from PIL import Image
 import pandas as pd
@@ -30,12 +8,18 @@ from bs4 import BeautifulSoup
 import requests
 import json
 import time
+#---------------------------------#
+# New feature (make sure to upgrade your streamlit library)
+# pip install --upgrade streamlit
 
+#---------------------------------#
+# Page layout
+## Page expands to full width
 st.set_page_config(layout="wide")
 #---------------------------------#
 # Title
 
-image = Image.open('Bitcoin.svg.png')
+image = Image.open('logo.jpg')
 
 st.image(image, width = 500)
 
