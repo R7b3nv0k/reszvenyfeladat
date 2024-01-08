@@ -13,7 +13,7 @@ st.set_page_config(layout="wide")
 #---------------------------------#
 # Title
 
-image = Image.open('logo.jpg')
+image = Image.open('Bitcoin.svg.png')
 
 st.image(image, width = 500)
 
